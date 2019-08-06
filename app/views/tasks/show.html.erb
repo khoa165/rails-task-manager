@@ -15,5 +15,7 @@
       This task is not completed yet.
     <% end %>
   </div>
-  <%= link_to "Return to list", tasks_path, class: "btn-elegant" %>
+  <%= link_to tasks_path, class: "btn-elegant" do %>
+    <i class="fa fa-camera-retro"> Return to list</i>
+  <% end %>
 </div>

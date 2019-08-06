@@ -1,0 +1,19 @@
+<div class="container">
+  <%= form_for (task)  do |f| %>
+    <h6><%= f.label :title %></h6>
+    <%= f.text_field :title %>
+
+    <h6><%= f.label :details %></h6>
+    <%= f.text_field :details %>
+
+    <div>
+      <h6>
+        <%= f.check_box  :completed %>
+        <%= f.label :completed %>
+        ?
+      </h6>
+    </div>
+
+    <%= f.submit%>
+  <% end %>
+</div>

@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>My to-do tasks</h1>
+  <ul>
+    <% @tasks.each do |task| %>
+      <li>
+        <% if task.completed %>
+          <input type="checkbox" checked>
+        <% else %>
+          <input type="checkbox">
+        <% end %>
+        <%= link_to task.title, task_path(task), class: "link" %>
+      </li>
+    <% end %>
+  </ul>
+  <%= link_to "Add new task", task_new_path, class: "btn-elegant" %>
+</div>
